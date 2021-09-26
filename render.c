@@ -285,6 +285,7 @@ void play_game(board *game_board) {
         }
 
         if (game_board->won || board_lost(*game_board)) {
+            draw_cells(game_board->cells);
             draw_game_end(game_board->won);
             getch();
             break;
