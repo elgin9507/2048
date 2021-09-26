@@ -217,16 +217,16 @@ void draw_score(board_score_t score) {
 
 void draw_info() {
     wprintw(info_win, "Controls:\n\n");
-    wprintw(info_win, "W / ");
+    wprintw(info_win, "w / ");
     waddch(info_win, ACS_UARROW);
     wprintw(info_win, " - move up\n");
-    wprintw(info_win, "S / ");
+    wprintw(info_win, "s / ");
     waddch(info_win, ACS_DARROW);
     wprintw(info_win, " - move down\n");
-    wprintw(info_win, "A / ");
+    wprintw(info_win, "a / ");
     waddch(info_win, ACS_LARROW);
     wprintw(info_win, " - move left\n");
-    wprintw(info_win, "D / ");
+    wprintw(info_win, "d / ");
     waddch(info_win, ACS_RARROW);
     wprintw(info_win, " - move right\n");
     wprintw(info_win, "q - quit game\n");
