@@ -7,7 +7,7 @@
 
 #### Compilation ####
 
-For the git version you will have to do:
+Clone git repository and compile
 
 ```
 git clone https://github.com/elgin9507/2048.git
