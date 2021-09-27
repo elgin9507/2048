@@ -5,7 +5,7 @@
 
 #define GRID_STARTY        1
 #define GRID_STARTX        2
-#define GRID_BLOCK_SIZE    4
+#define GRID_BLOCK_SIZE    BOARD_SIZE
 #define GRID_BLOCK_HEIGHT  3
 #define GRID_BLOCK_WIDTH   7
 #define GRID_ROWS          GRID_BLOCK_SIZE * (GRID_BLOCK_HEIGHT + 1) + 1
