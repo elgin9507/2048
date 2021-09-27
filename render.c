@@ -217,16 +217,16 @@ void draw_score(board_score_t score) {
 
 void draw_info() {
     wprintw(info_win, "Controls:\n\n");
-    wprintw(info_win, "w / ");
+    wprintw(info_win, "w/k/");
     waddch(info_win, ACS_UARROW);
     wprintw(info_win, " - move up\n");
-    wprintw(info_win, "s / ");
+    wprintw(info_win, "s/j/");
     waddch(info_win, ACS_DARROW);
     wprintw(info_win, " - move down\n");
-    wprintw(info_win, "a / ");
+    wprintw(info_win, "a/h/");
     waddch(info_win, ACS_LARROW);
     wprintw(info_win, " - move left\n");
-    wprintw(info_win, "d / ");
+    wprintw(info_win, "d/l/");
     waddch(info_win, ACS_RARROW);
     wprintw(info_win, " - move right\n");
     wprintw(info_win, "q - quit game\n");
@@ -260,19 +260,23 @@ void play_game(board *game_board) {
 
     while ((input = getch()) != INPUT_EXIT) {
         switch (input) {
-            case INPUT_UP:
+            case INPUT_UP1:
+            case INPUT_UP2:
             case KEY_UP:
                 changed = board_move(game_board, BOARD_DIR_UP);
                 break;
-            case INPUT_DOWN:
+            case INPUT_DOWN1:
+            case INPUT_DOWN2:
             case KEY_DOWN:
                 changed = board_move(game_board, BOARD_DIR_DOWN);
                 break;
-            case INPUT_RIGHT:
+            case INPUT_RIGHT1:
+            case INPUT_RIGHT2:
             case KEY_RIGHT:
                 changed = board_move(game_board, BOARD_DIR_RIGHT);
                 break;
-            case INPUT_LEFT:
+            case INPUT_LEFT1:
+            case INPUT_LEFT2:
             case KEY_LEFT:
                 changed = board_move(game_board, BOARD_DIR_LEFT);
                 break;

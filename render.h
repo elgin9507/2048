@@ -82,10 +82,14 @@
 
 #define INPUT_EXIT     'q'
 #define INPUT_RESTART  'r'
-#define INPUT_UP       'w'
-#define INPUT_RIGHT    'd'
-#define INPUT_DOWN     's'
-#define INPUT_LEFT     'a'
+#define INPUT_UP1      'w'
+#define INPUT_UP2      'k'
+#define INPUT_RIGHT1   'd'
+#define INPUT_RIGHT2   'l'
+#define INPUT_DOWN1    's'
+#define INPUT_DOWN2    'j'
+#define INPUT_LEFT1    'a'
+#define INPUT_LEFT2    'h'
 
 static void get_cell_rc(int, int, int*, int*);
 static int get_color_by_cell_value(int);
