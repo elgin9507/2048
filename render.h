@@ -20,6 +20,14 @@
 #define INFO_STARTX        GRID_STARTX + GRID_COLS + GRID_MARGIN_RIGHT
 #define INFO_ROWS          8
 #define INFO_COLS          20
+#define MIN_ROWS_REQUIRED   GRID_STARTY + \
+                            GRID_ROWS + \
+                            GRID_MARGIN_BELOW + \
+                            SCORE_ROWS
+#define MIN_COLS_REQUIRED   GRID_STARTX + \
+                            GRID_COLS + \
+                            GRID_MARGIN_RIGHT + \
+                            INFO_COLS
 
 #define COLOR_GREY_DARK   8
 #define COLOR_GREY_LIGHT  9
@@ -94,6 +102,7 @@
 static void get_cell_rc(int, int, int*, int*);
 static int get_color_by_cell_value(int);
 static void draw_info(void);
+static void check_term_size(void);
 
 void init_colors(void);
 void render_init(board);

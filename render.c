@@ -12,6 +12,7 @@ WINDOW *info_win;
 
 void render_init(board game_board) {
     initscr();
+    check_term_size();
     noecho();
     init_colors();
     keypad(stdscr, TRUE);
@@ -29,6 +30,17 @@ void render_init(board game_board) {
     wrefresh(board_win);
     wrefresh(score_win);
     wrefresh(info_win);
+}
+
+static void check_term_size() {
+    int y_max, x_max;
+    getmaxyx(stdscr, y_max, x_max);
+
+    if (y_max < MIN_ROWS_REQUIRED || x_max < MIN_COLS_REQUIRED) {
+        render_end();
+        fprintf(stderr, "this terminal is too small to hold game interface!\n");
+        exit(EXIT_FAILURE);
+    }
 }
 
 void init_colors() {
